@@ -1,0 +1,2 @@
+configuration,approx_cols,l_cols,experiment,input_image,width,height,raw_gradient_mae,raw_gradient_maximum_error,edge_image_mae,changed_pixels_percent,psnr_db,ssim
+H10_M0_L6,6,6,encoder_only_software_sobel,C:\Users\Satish\booth_approx_research\images\test1.png,500,375,338.95911466666666,855,4.556453333333334,89.9344,33.18761805238131,0.7289621345987236

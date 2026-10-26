@@ -1,0 +1,761 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date              : Fri Oct 23 20:48:29 2026
+| Host              : Sateesh running 64-bit major release  (build 9200)
+| Command           : report_timing_summary -delay_type max -max_paths 10 -file C:/Users/Satish/booth_approx_research/results/CSA_H10_M0_L6/timing_synth.rpt
+| Design            : booth8_hybrid_csa
+| Device            : xczu7ev-ffvc1156
+| Speed File        : -2  PRODUCTION 1.31 12-08-2025
+| Design State      : Synthesized
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      4.354        0.000                      0                   16           NA           NA                      NA                    NA  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+virtual_clk  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+virtual_clk         4.354        0.000                      0                   16                                                                          
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  virtual_clk
+  To Clock:  virtual_clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        4.354ns,  Total Violation        0.000ns
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             4.354ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[15]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.621ns  (logic 1.976ns (54.569%)  route 1.645ns (45.431%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[6])
+                                                      0.196     3.155 r  product_OBUF[15]_inst_i_1/O[6]
+                         net (fo=1, unplaced)         0.507     3.662    product_OBUF[15]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.621 r  product_OBUF[15]_inst/O
+                         net (fo=0)                   0.000     4.621    product[15]
+                                                                      r  product[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.621    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.354    <hidden>
+
+Slack (MET) :             4.374ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[13]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.601ns  (logic 1.958ns (54.372%)  route 1.643ns (45.628%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[4])
+                                                      0.178     3.137 r  product_OBUF[15]_inst_i_1/O[4]
+                         net (fo=1, unplaced)         0.505     3.642    product_OBUF[13]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.601 r  product_OBUF[13]_inst/O
+                         net (fo=0)                   0.000     4.601    product[13]
+                                                                      r  product[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.601    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.374    <hidden>
+
+Slack (MET) :             4.386ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[14]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.589ns  (logic 1.988ns (55.390%)  route 1.601ns (44.610%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[5])
+                                                      0.208     3.167 r  product_OBUF[15]_inst_i_1/O[5]
+                         net (fo=1, unplaced)         0.463     3.630    product_OBUF[14]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.589 r  product_OBUF[14]_inst/O
+                         net (fo=0)                   0.000     4.589    product[14]
+                                                                      r  product[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.589    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.386    <hidden>
+
+Slack (MET) :             4.425ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[10]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.550ns  (logic 1.861ns (52.421%)  route 1.689ns (47.579%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[1])
+                                                      0.081     3.040 r  product_OBUF[15]_inst_i_1/O[1]
+                         net (fo=1, unplaced)         0.551     3.591    product_OBUF[10]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.550 r  product_OBUF[10]_inst/O
+                         net (fo=0)                   0.000     4.550    product[10]
+                                                                      r  product[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.550    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.425    <hidden>
+
+Slack (MET) :             4.441ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[11]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.534ns  (logic 1.889ns (53.451%)  route 1.645ns (46.549%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[2])
+                                                      0.109     3.068 r  product_OBUF[15]_inst_i_1/O[2]
+                         net (fo=1, unplaced)         0.507     3.575    product_OBUF[11]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.534 r  product_OBUF[11]_inst/O
+                         net (fo=0)                   0.000     4.534    product[11]
+                                                                      r  product[11]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.534    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.441    <hidden>
+
+Slack (MET) :             4.477ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[9]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.498ns  (logic 2.104ns (60.147%)  route 1.394ns (39.853%))
+  Logic Levels:           8  (CARRY8=2 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[8]_inst_i_42/O
+                         net (fo=4, unplaced)         0.152     2.412    raw_pp[1][4]
+                         LUT5 (Prop_LUT5_I2_O)        0.090     2.502 r  product_OBUF[8]_inst_i_31/O
+                         net (fo=1, unplaced)         0.140     2.642    sum2[6]
+                         LUT6 (Prop_LUT6_I0_O)        0.088     2.730 r  product_OBUF[8]_inst_i_10/O
+                         net (fo=1, unplaced)         0.029     2.759    product_OBUF[8]_inst_i_10_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.166     2.925 r  product_OBUF[8]_inst_i_1/CO[7]
+                         net (fo=1, unplaced)         0.005     2.930    product_OBUF[8]_inst_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.056     2.986 r  product_OBUF[15]_inst_i_1/O[0]
+                         net (fo=1, unplaced)         0.553     3.539    product_OBUF[9]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.498 r  product_OBUF[9]_inst/O
+                         net (fo=0)                   0.000     4.498    product[9]
+                                                                      r  product[9]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.498    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.477    <hidden>
+
+Slack (MET) :             4.483ns  (required time - arrival time)
+  Source:                 b[3]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[12]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.492ns  (logic 1.895ns (54.266%)  route 1.597ns (45.734%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[3]
+                         net (fo=0)                   0.000     1.000    b_IBUF[3]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[3]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[3]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[3]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[3]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[15]_inst_i_29/O
+                         net (fo=5, unplaced)         0.204     2.464    raw_pp[1][7]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.502 r  product_OBUF[15]_inst_i_31/O
+                         net (fo=2, unplaced)         0.186     2.688    sum2[9]
+                         LUT5 (Prop_LUT5_I0_O)        0.038     2.726 r  product_OBUF[15]_inst_i_7/O
+                         net (fo=1, unplaced)         0.233     2.959    sum3[9]
+                         CARRY8 (Prop_CARRY8_DI[0]_O[3])
+                                                      0.115     3.074 r  product_OBUF[15]_inst_i_1/O[3]
+                         net (fo=1, unplaced)         0.459     3.533    product_OBUF[12]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.492 r  product_OBUF[12]_inst/O
+                         net (fo=0)                   0.000     4.492    product[12]
+                                                                      r  product[12]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.492    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.483    <hidden>
+
+Slack (MET) :             4.583ns  (required time - arrival time)
+  Source:                 b[5]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[8]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.392ns  (logic 1.872ns (55.187%)  route 1.520ns (44.813%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=1 LUT6=2 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[5]
+                         net (fo=0)                   0.000     1.000    b_IBUF[5]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[5]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[5]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[5]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[5]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[8]_inst_i_41/O
+                         net (fo=4, unplaced)         0.198     2.458    raw_pp[2][2]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.496 r  product_OBUF[8]_inst_i_19/O
+                         net (fo=3, unplaced)         0.192     2.688    sum1__0[6]
+                         LUT6 (Prop_LUT6_I2_O)        0.038     2.726 r  product_OBUF[8]_inst_i_3/O
+                         net (fo=1, unplaced)         0.108     2.834    sum3[7]
+                         CARRY8 (Prop_CARRY8_DI[6]_O[7])
+                                                      0.092     2.926 r  product_OBUF[8]_inst_i_1/O[7]
+                         net (fo=1, unplaced)         0.507     3.433    product_OBUF[8]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.392 r  product_OBUF[8]_inst/O
+                         net (fo=0)                   0.000     4.392    product[8]
+                                                                      r  product[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.392    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.583    <hidden>
+
+Slack (MET) :             4.594ns  (required time - arrival time)
+  Source:                 b[5]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[7]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.381ns  (logic 1.901ns (56.225%)  route 1.480ns (43.775%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT5=2 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[5]
+                         net (fo=0)                   0.000     1.000    b_IBUF[5]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[5]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[5]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[5]_inst/IBUFCTRL_INST/O
+                         net (fo=26, unplaced)        0.515     2.097    b_IBUF[5]
+                         LUT5 (Prop_LUT5_I0_O)        0.163     2.260 r  product_OBUF[8]_inst_i_41/O
+                         net (fo=4, unplaced)         0.198     2.458    raw_pp[2][2]
+                         LUT6 (Prop_LUT6_I5_O)        0.038     2.496 r  product_OBUF[8]_inst_i_19/O
+                         net (fo=3, unplaced)         0.143     2.639    sum1__0[6]
+                         LUT5 (Prop_LUT5_I0_O)        0.053     2.692 r  product_OBUF[8]_inst_i_4/O
+                         net (fo=1, unplaced)         0.117     2.809    sum3[6]
+                         CARRY8 (Prop_CARRY8_DI[5]_O[6])
+                                                      0.106     2.915 r  product_OBUF[8]_inst_i_1/O[6]
+                         net (fo=1, unplaced)         0.507     3.422    product_OBUF[7]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.381 r  product_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     4.381    product[7]
+                                                                      r  product[7]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.381    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.594    <hidden>
+
+Slack (MET) :             4.656ns  (required time - arrival time)
+  Source:                 b[0]
+                            (input port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            product[5]
+                            (output port clocked by virtual_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             virtual_clk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            10.000ns  (virtual_clk rise@10.000ns - virtual_clk rise@0.000ns)
+  Data Path Delay:        3.319ns  (logic 1.890ns (56.944%)  route 1.429ns (43.056%))
+  Logic Levels:           7  (CARRY8=1 IBUFCTRL=1 INBUF=1 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+  Input Delay:            1.000ns
+  Output Delay:           1.000ns
+  Clock Uncertainty:      0.025ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock virtual_clk rise edge)
+                                                      0.000     0.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000     0.000    <hidden>
+                         input delay                  1.000     1.000    <hidden>
+                                                      0.000     1.000 r  b[0]
+                         net (fo=0)                   0.000     1.000    b_IBUF[0]_inst/I
+                         INBUF (Prop_INBUF_PAD_O)     0.582     1.582 r  b_IBUF[0]_inst/INBUF_INST/O
+                         net (fo=1, unplaced)         0.000     1.582    b_IBUF[0]_inst/OUT
+                         IBUFCTRL (Prop_IBUFCTRL_I_O)
+                                                      0.000     1.582 r  b_IBUF[0]_inst/IBUFCTRL_INST/O
+                         net (fo=32, unplaced)        0.520     2.102    b_IBUF[0]
+                         LUT6 (Prop_LUT6_I1_O)        0.125     2.227 r  product_OBUF[8]_inst_i_26/O
+                         net (fo=2, unplaced)         0.186     2.413    carry1[4]
+                         LUT5 (Prop_LUT5_I4_O)        0.038     2.451 r  product_OBUF[8]_inst_i_6/O
+                         net (fo=2, unplaced)         0.186     2.637    sum3[4]
+                         LUT4 (Prop_LUT4_I0_O)        0.037     2.674 r  product_OBUF[8]_inst_i_12/O
+                         net (fo=1, unplaced)         0.032     2.706    product_OBUF[8]_inst_i_12_n_0
+                         CARRY8 (Prop_CARRY8_S[3]_O[4])
+                                                      0.149     2.855 r  product_OBUF[8]_inst_i_1/O[4]
+                         net (fo=1, unplaced)         0.505     3.360    product_OBUF[5]
+                         OBUF (Prop_OBUF_I_O)         0.959     4.319 r  product_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     4.319    product[5]
+                                                                      r  product[5]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock virtual_clk rise edge)
+                                                     10.000    10.000 r  <hidden>
+                         ideal clock network latency
+                                                      0.000    10.000    <hidden>
+                         clock pessimism              0.000    10.000    <hidden>
+                         clock uncertainty           -0.025     9.975    <hidden>
+                         output delay                -1.000     8.975    <hidden>
+  -------------------------------------------------------------------
+                         required time                          8.975    <hidden>
+                         arrival time                          -4.319    <hidden>
+  -------------------------------------------------------------------
+                         slack                                  4.656    <hidden>
+
+
+
+
+
+

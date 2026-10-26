@@ -1,0 +1,2 @@
+configuration,image_source,width,height,gradient_mae,gradient_max_absolute_error,edge_image_mae,changed_pixels_percent,psnr_db,ssim,display_scale
+H12_M0_L4_encoder_only_CSA,C:\Users\Satish\booth_approx_research\images\test1.png,500,375,33.674848,112,0.43650666666666665,42.144533333333335,51.440884702611214,0.9899885641089781,96

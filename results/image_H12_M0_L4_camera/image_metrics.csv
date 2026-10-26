@@ -1,0 +1,2 @@
+configuration,image_source,width,height,gradient_mae,gradient_max_absolute_error,edge_image_mae,changed_pixels_percent,psnr_db,ssim,display_scale
+H12_M0_L4_encoder_only_CSA,skimage_camera,512,512,35.11110496520996,116,0.4801826477050781,45.122528076171875,50.82207167031453,0.9797867706124985,96
